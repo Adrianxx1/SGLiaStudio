@@ -1,10 +1,17 @@
+# ------------------------------------------
+# Default Spring Initializr
+# ------------------------------------------
 HELP.md
 target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+# ------------------------------------------
+# IDEs
+# ------------------------------------------
+
+# STS
 .apt_generated
 .classpath
 .factorypath
@@ -13,21 +20,56 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
+# IntelliJ IDEA
+.idea/
 *.iws
 *.iml
 *.ipr
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
+# VS Code
 .vscode/
+
+# ------------------------------------------
+# Build / Output
+# ------------------------------------------
+build/
+out/
+
+# ------------------------------------------
+# OS Files
+# ------------------------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------------------------
+# Logs
+# ------------------------------------------
+*.log
+logs/
+
+# ------------------------------------------
+# Environment & Credentials
+# (para no subir claves o configs locales)
+# ------------------------------------------
+*.env
+application-local.yml
+application-secret.yml
+application-dev.yml
+application-local.properties
+application-dev.properties
+
+# ------------------------------------------
+# Temp files
+# ------------------------------------------
+*.tmp
+*.bak
+*.swp
+*~
+*.orig
