@@ -25,11 +25,7 @@ Cliente
 Servicio
 MovimientoFinanciero
 
-Durante este Sprint 
-Se creo una entidad de prueba (TestEntity)
-Se configuró JPA para crear tablas automáticamente.
-Se verificó que el proyecto inicia sin errores.
-Se confirmó la conexión con MySQL viendo la tabla en phpMyAdmin.
+
 
 Proximos Sprints 
 | Sprint       | Descripción                                          |
