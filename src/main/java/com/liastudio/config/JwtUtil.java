@@ -15,22 +15,17 @@ import java.util.function.Function;
 @Component
 public class JwtUtil {
     
-    // Clave secreta para firmar el token
     private static final String SECRET_KEY = "MiClaveSecretaSuperSeguraParaJWT2024SalonDeBellezaLiaStudio";
-    
-    // Tiempo de expiración: 24 horas
     private static final long JWT_TOKEN_VALIDITY = 24 * 60 * 60 * 1000;
     
     private Key getSigningKey() {
         return Keys.hmacShaKeyFor(SECRET_KEY.getBytes());
     }
     
-    // Extraer teléfono del token
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }
     
-    // Extraer fecha de expiración
     public Date extractExpiration(String token) {
         return extractClaim(token, Claims::getExpiration);
     }
@@ -48,12 +43,10 @@ public class JwtUtil {
                 .getBody();
     }
     
-    // Verificar si el token expiró
     private Boolean isTokenExpired(String token) {
         return extractExpiration(token).before(new Date());
     }
     
-    // Generar token
     public String generateToken(String username, String rol) {
         Map<String, Object> claims = new HashMap<>();
         claims.put("rol", rol);
@@ -70,7 +63,6 @@ public class JwtUtil {
                 .compact();
     }
     
-    // Validar token
     public Boolean validateToken(String token, String username) {
         final String extractedUsername = extractUsername(token);
         return (extractedUsername.equals(username) && !isTokenExpired(token));

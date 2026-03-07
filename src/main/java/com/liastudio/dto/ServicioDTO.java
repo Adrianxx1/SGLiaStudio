@@ -1,13 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.liastudio.dto;
 
-/**
- *
- * @author triax
- */
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class ServicioDTO {
-    
+    private Long idServicio;
+    private String nombre;
+    private String descripcion;
+    private Double precio;
+    private Integer duracionMinutos;
+    private Long idCategoria;
+    private String nombreCategoria; 
 }
